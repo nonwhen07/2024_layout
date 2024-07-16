@@ -62,6 +62,7 @@ body{
 *::before,
 *::after {
     box-sizing: border-box;
+	/* outline: solid 1px; */
 }
 
 a{
@@ -92,7 +93,7 @@ img{
 	color: #D1D1D1;
 } */
 
-/* component*/
+/* component */
 .btn{
 	padding: 12px 24px;
 	border-radius: 32px; /* 點選設計稿中的btn在Layout-Radius 有顯示 32px */
@@ -119,6 +120,66 @@ img{
 	text-align: right;
 }
 
+.intro{
+	background-image: url("img/background-img.png");
+	background-repeat: no-repeat; /* no-repeat：預設值，背景圖會重複；repeat：不重複背景圖 */
+	background-size: cover; /* contain：預設值，讓圖片可以整個呈現在區塊裡；cover：填滿整個區塊 */
+	color: #FFF;
+	padding: 160px 0; /* 用padding把上下撐開 */
+}
+
+.intro-desc{
+	width: 526px;
+}
+
+.about{
+	background-color: #FFF;
+	color: #000;
+	padding: 160px 0; /* 用padding把上下撐開 */
+}
+
+.about-list{
+	width: 636px;
+	flex-wrap: wrap;
+	justify-content: space-between;/* 第1種卡片間距寫法:卡片中間的間距可以用父層的 justify-content: space-between; 去推開 */
+	/* 第3種卡片間距寫法:  gap: 24px; 並把justify-content: space-between;註解，卡片01、02的通用樣式mb-6也可以註解，gap會自動推開。  */
+}
+
+.about-list li{
+	width: 48%; /* 配合第1種寫法 width不要寫滿50% 留點空間 */
+	/* 第2種卡片間距寫法:  width: calc(50%-12px); 這是更精準的寫法，width佔50%扣去間距12px，calc是計算函式 */
+
+	box-shadow: 4px 4px 4px 0px #00000014;  /* offset-x | offset-y | blur-radius | spread-radius | color    ，屬性可以直接複製貼上 */ 
+}
+
+
+.about-desc{
+	width: 526px;
+}
+
+.contact{
+	background-color: #050014;
+	color: #fff;
+	padding: 96px 0;	
+}
+
+.project{
+	background-color: #FFF;
+	color: #000;
+	padding: 160px 0;
+}
+
+.project-desc{
+	display: flex;
+}
+
+.footer{
+	background-color: #000;
+	color: #fff;
+	padding: 40px 0;
+}
+
+
 /* utils */
 .container{
     width: 1296px; /* 計算方法: columns 12*86(width) +gutter 11*24 = 1032 + 264 = 1296 */
@@ -130,7 +191,7 @@ img{
 }
 
 .h2{
-	font-size: 40px;
+	font-size: 64px;
 }
 
 .fs-1{
@@ -153,6 +214,14 @@ img{
 	display: flex;
 }
 
+.justity-content-center{
+	justify-content: center;
+}
+
+
+.justity-content-between{
+	justify-content: space-between;
+}
 .justity-content-end{
 	justify-content: flex-end;
 }
@@ -161,17 +230,31 @@ img{
 	align-items: center;
 }
 
+.align-content-between{
+	align-content: space-between;
+}
+
+
+
+
+
 .mr-6{ /* 設計稿間距大多為4px的倍數，所以4px=1 */
 	margin-right: 24px;
 }
+
+.mb-6{ 
+	margin-bottom: 24px;
+}
+
+.mb-9{ 
+	margin-bottom: 36px;
+}
+
+
+
 
 .ml-auto{
 	margin-left: auto;
 }
 
 
-.bruno-ace-sc-regular {
-    font-family: "Bruno Ace SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
