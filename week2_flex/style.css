@@ -54,7 +54,7 @@ table {
 /* base */
 
 body{
-    font-family: serif;
+	font-family: "Bruno Ace SC", sans-serif;
     line-height: 1.5; /* 用整體的line-height / font-size，其他少數有不一致的個別設定 */
 }
 
@@ -66,7 +66,7 @@ body{
 
 a{
 	display: inline-block;
-	color: #000;
+	color: #D1D1D1;
 }
 
 img{
@@ -75,9 +75,54 @@ img{
 	vertical-align: middle;
 }
 
+
+/* layout*/
+.header{
+	background-color: #000;
+	color: #D1D1D1;
+}
+.nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* .main{
+	background-color: #000;
+	color: #D1D1D1;
+} */
+
+/* component*/
+.btn{
+	padding: 12px 24px;
+	border-radius: 32px; /* 點選設計稿中的btn在Layout-Radius 有顯示 32px */
+}
+
+.btn-light{ 
+	background-color: #FFF;
+	color: #000;;
+}
+
+.btn-dark{
+	background-color: #000;
+	color: #FFF;
+}
+
+/* page */
+.banner{
+	background-color: #000;
+	color: #D1D1D1;
+}
+
+.banner-title-strong{
+	display: block;
+	text-align: right;
+}
+
+/* utils */
 .container{
     width: 1296px; /* 計算方法: columns 12*86(width) +gutter 11*24 = 1032 + 264 = 1296 */
-    margin: auto;
+    margin: 0 auto;
 }
 
 .h1{
@@ -100,6 +145,29 @@ img{
 	font-size: 20px;
 }
 
+.text-primary{
+	color: #00FFA3;
+}
+
+.d-flex{
+	display: flex;
+}
+
+.justity-content-end{
+	justify-content: flex-end;
+}
+
+.align-items-center{
+	align-items: center;
+}
+
+.mr-6{ /* 設計稿間距大多為4px的倍數，所以4px=1 */
+	margin-right: 24px;
+}
+
+.ml-auto{
+	margin-left: auto;
+}
 
 
 .bruno-ace-sc-regular {
