@@ -214,6 +214,10 @@ img{
 	display: flex;
 }
 
+.flex-direction-column{
+	flex-direction: column;
+}
+
 .justity-content-center{
 	justify-content: center;
 }
