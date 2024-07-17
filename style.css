@@ -121,7 +121,7 @@ img{
 }
 
 .intro{
-	background-image: url("img/background-img.png");
+	background-image: url("week2_flex/img/background-img.png");
 	background-repeat: no-repeat; /* no-repeat：預設值，背景圖會重複；repeat：不重複背景圖 */
 	background-size: cover; /* contain：預設值，讓圖片可以整個呈現在區塊裡；cover：填滿整個區塊 */
 	color: #FFF;
