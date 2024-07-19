@@ -67,6 +67,7 @@ body{
 
 a{
 	display: inline-block;
+	text-decoration: none;
 	color: #D1D1D1;
 }
 
@@ -104,9 +105,21 @@ img{
 	color: #000;;
 }
 
+.btn-light:hover{
+	box-shadow: 0px 0px 16px 3px #9094FFE5;
+	/* box-shadow: 0px 4px 4px 0px #00000040; */
+	transition: 0.5s; /* 延遲秒數可加可不加 */
+}
+
 .btn-dark{
 	background-color: #000;
 	color: #FFF;
+}
+
+.btn-dark:hover{
+	box-shadow: 0px 0px 16px 3px #050014;
+	/* box-shadow: 0px 4px 4px 0px #00000040; */
+	transition: 0.5s; /* 延遲秒數可加可不加 */
 }
 
 /* page */
@@ -163,9 +176,16 @@ img{
 	padding: 96px 0;	
 }
 
+.link-hover:hover{
+	background: #010344e5;
+	box-shadow: 0px 0px 16px 3px #010344e5;
+	transition: 0.5s; /* 延遲秒數可加可不加 */
+}
+
 .socal-link{
 	border-radius: 40px; /* 設定圓角角度看設計稿 */ 
 }
+
 .socal-link:hover{
 	box-shadow: 0px 0px 16px 3px #9094FFE5;
 	/* box-shadow: 0px 4px 4px 0px #00000040; */
@@ -236,10 +256,10 @@ img{
 	justify-content: center;
 }
 
-
 .justity-content-between{
 	justify-content: space-between;
 }
+
 .justity-content-end{
 	justify-content: flex-end;
 }
@@ -248,10 +268,13 @@ img{
 	align-items: center;
 }
 
+.align-items-start{
+	align-items: start
+}
+
 .align-content-between{
 	align-content: space-between;
 }
-
 
 .mr-6{ /* 設計稿間距大多為4px的倍數，所以4px=1 */
 	margin-right: 24px;
