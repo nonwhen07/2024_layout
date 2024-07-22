@@ -255,7 +255,6 @@ img{
 	justify-content: center;
 }
 
-
 .justity-content-between{
 	justify-content: space-between;
 }
@@ -274,9 +273,6 @@ img{
 .align-content-between{
 	align-content: space-between;
 }
-
-
-
 
 .mr-6{ /* 設計稿間距大多為4px的倍數，所以4px=1 */
 	margin-right: 24px;
