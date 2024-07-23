@@ -1,0 +1,326 @@
+
+/* Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* 思源黑體 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+/* base */
+
+body{
+	font-family: "Roboto", "Noto Sans TC", sans-serif;
+    line-height: 1.5; /* 先設定1.5，還不熟溪XD的設計稿 */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+	/* outline: solid 1px; */
+}
+
+a{
+	display: inline-block;
+	text-decoration: none;
+	color: #ffffff; /* 由於會被主業的css覆蓋先處理，調整後移除 */
+}
+
+
+
+
+
+
+
+img{
+    max-width: 100%;
+    margin: 0 auto;
+	vertical-align: middle;
+}
+
+
+/* layout*/
+.header{
+	background-color: #aa0601;
+	color: #ffffff;
+	font-size: 20px;
+}
+.header-bar{
+	display: flex;
+	padding: 25px 0;
+	justify-content: space-between;
+	align-items: center;
+}
+.nav{
+	width: 512px;
+	display: flex;
+	justify-content: space-between;
+}
+.logo{
+	margin: 0 0;
+	width: 80px;
+	height: auto;
+}
+
+
+.banner{
+	background-image: url("../img/home-header.png");
+	background-repeat: no-repeat; /* repeat：預設值，背景圖會重複；no-repeat：不重複背景圖 */
+	background-size: cover; /* 表示的方式可以寫成px、百分比、cover(將圖片填滿整個容器，若圖片小於容器且像素過低時，容易造成失真)、contain(將圖片縮小成可以完整放入容器的大小，可用於圖片大過容器時的情況) */
+	padding: 296px 0;
+	color: #650300;
+	text-align: right;
+}
+.banner-title{
+	width: 50%;
+	margin-left: auto;
+}
+
+
+.intro{
+	background-color: #FBF2F2;
+	color: #650300;
+	text-align: center;
+	padding: 80px 0;
+}
+.card-list{
+	display: flex;
+	justify-content: space-between;
+	color: #000000;
+	font-size: 16px;
+}
+.card-item{
+	width: 306px;
+}
+.card-item img{
+	width: 84px;
+	height: auto;
+}
+.card-item-title{
+	color: #650300;
+	font-size: 24px;
+}
+.card-item-p{
+	color: #000000;
+	font-size: 16px;
+	text-align: left;
+}
+
+
+
+.classic{
+	background: #fff;
+	color: #650300;
+	text-align: center;
+	padding: 80px 0;
+}
+
+.design{
+	background-image: url("../img/index-bg.png");
+	color: #ffffff;
+	text-align: center;
+	padding: 80px 0;
+}
+
+.recommend{
+	background-color: #ffffff;
+	color: #650300;
+	text-align: center;
+	padding: 80px 0;
+}
+
+
+
+
+
+.contact{
+	background-color: #FBF2F2;
+	color: #000;
+	font-size: 20px;
+	text-align: center;
+	padding: 80px 0;
+}
+.contact-title{
+	color: #650300;
+}
+
+.contact-form{
+	width: 636px;
+	font-size: 16px;
+}
+
+
+
+
+
+
+
+.footer{
+	background-color: #aa0601;
+	color: #ffffff;
+	font-size: 16px;
+
+	padding-top: 48px;
+	padding-bottom: 32px;
+}
+.social-link{
+	border-radius: 40px; /* 設定圓角角度看設計稿 */ 
+	width: 48px;
+	height: auto;
+}
+.social-link:hover{
+	box-shadow: 0px 0px 16px 3px #650300;
+	transition: 0.5s; 
+}
+
+
+
+
+
+
+
+/* component */
+
+
+.link-hover:hover{
+	background: #650300;
+	box-shadow: 0px 0px 16px 3px #650300;
+	transition: 0.5s; 
+}
+
+
+.btn{
+	padding: 6px 12px;
+	 /* border-radius: 32px; 點選設計稿中的btn在Layout-Radius 有顯示 32px */
+}
+
+.btn-red{ 
+	background-color: #AA0601;
+	color: #ffffff;;
+}
+
+.btn-red:hover{
+	box-shadow: 0px 0px 16px 3px #650300;
+	background-color: #650300;
+	transition: 0.5s; /* 延遲秒數可加可不加 */
+}
+
+
+/* utils */
+.container{
+    max-width: 1296px; /* 算法依樣 12列、列寬86、間距24 => 12*86+11*24=1296 */
+    margin: 0 auto;
+}
+
+
+
+
+.h1{
+	font-size: 64px;
+}
+
+.h2{
+	font-size: 48px;
+}
+
+.h3{
+	font-size: 36px;
+}
+
+
+
+.d-flex{
+	display: flex;
+}
+
+.justify-content-between{
+	justify-content: space-between;
+}
+
+.align-items-center{
+	align-items: center;
+}
+
+
+
+.mr-8{
+	margin-right: 32px;
+}
+
+.mr-12{
+	margin-right: 48px;
+}
+
+
+
+.mb-2{
+	margin-bottom: 8px;
+}
+
+
+
+
+
+
+.mb-6{
+	margin-bottom: 24px;
+}
+
+.mb-8{
+	margin-bottom: 32px;
+}
+
+
+.mb-12{
+	margin-bottom: 48px;
+}
+
+.mb-16{
+	margin-bottom: 64px;
+}

@@ -80,8 +80,15 @@ img{
 
 
 /* layout*/
-
-
+.header{
+	background-color: #aa0601;
+	color: #ffffff;
+}
+.nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 
 /* component */
 
@@ -91,4 +98,13 @@ img{
 .container{
     width: 1296px;
     margin: 0 auto;
+}
+
+.d-flex{
+	display: flex;
+}
+
+
+.justify-content-between{
+	justify-content: space-between;
 }
