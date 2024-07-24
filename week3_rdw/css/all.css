@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /* 思源黑體 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
-
+/* Bootstrap Icons CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -156,10 +157,15 @@ img{
 
 .classic{
 	background: #fff;
-	color: #650300;
+	color: #AA0601;
 	text-align: center;
 	padding: 80px 0;
 }
+.classic-item{
+	max-width: 416px;
+	height: auto;
+}
+
 
 .design{
 	background-image: url("../img/index-bg.png");
@@ -167,33 +173,71 @@ img{
 	text-align: center;
 	padding: 80px 0;
 }
+.design-item-content{
+	background-color: #ffffff;
+	color: #AA0601;
+	padding: 8px 0;
+	
+}
+
+
+
 
 .recommend{
 	background-color: #ffffff;
 	color: #650300;
-	text-align: center;
 	padding: 80px 0;
 }
+.recommend-item {
+	max-width: 306px;
+	height: auto;
+	box-shadow: 0px 2px 6px #00000029;
+	border-radius: 4px;
+}
 
-
+.recommend-item-content{
+	font-size: 16px;
+	color: #000;
+	padding: 16px 16px;
+}
+.recommend-item-date{
+	font-size: 14px;
+	color: #707070;
+}
 
 
 
 .contact{
 	background-color: #FBF2F2;
-	color: #000;
-	font-size: 20px;
-	text-align: center;
 	padding: 80px 0;
+	display: flex;
+	justify-content: center;
 }
 .contact-title{
 	color: #650300;
+	text-align: center;
+}
+.contact-main{
+	width: 636px;
+	color: #000;
+}
+.form-title{
+	font-size: 20px;
+}
+.form{
+	font-size: 16px;
+	color: #000;
 }
 
-.contact-form{
-	width: 636px;
-	font-size: 16px;
+.feedback{
+	height: 136px;
 }
+
+
+
+
+
+
 
 
 
@@ -210,15 +254,19 @@ img{
 	padding-bottom: 32px;
 }
 .social-link{
-	border-radius: 40px; /* 設定圓角角度看設計稿 */ 
+	 /* 設定圓角角度看設計稿，XD不曉得怎麼看先處理 border-radius: 40px;*/ 
 	width: 48px;
 	height: auto;
+	margin: 0 0;
 }
 .social-link:hover{
 	box-shadow: 0px 0px 16px 3px #650300;
 	transition: 0.5s; 
 }
 
+.contact-link{
+	font-size: 36px;
+}
 
 
 
@@ -234,22 +282,29 @@ img{
 	transition: 0.5s; 
 }
 
-
+/* border-radius: 32px; 點選設計稿中的btn在Layout-Radius 有顯示 32px */
 .btn{
-	padding: 6px 12px;
-	 /* border-radius: 32px; 點選設計稿中的btn在Layout-Radius 有顯示 32px */
-}
-
-.btn-red{ 
 	background-color: #AA0601;
-	color: #ffffff;;
+	color: #ffffff;
 }
 
-.btn-red:hover{
+.btn:hover{
 	box-shadow: 0px 0px 16px 3px #650300;
 	background-color: #650300;
 	transition: 0.5s; /* 延遲秒數可加可不加 */
 }
+
+.btn-red{ 
+	padding: 6px 12px;
+}
+
+.btn-submit{
+	text-align: center;
+	/* width: auto; */
+	/* width: 416px; */
+	padding: 16px 176px; 
+}
+
 
 
 /* utils */
@@ -258,7 +313,13 @@ img{
     margin: 0 auto;
 }
 
+.w-50{
+    width: 50%;
+}
 
+.w-100{
+    width: 100%;
+}
 
 
 .h1{
@@ -274,6 +335,14 @@ img{
 }
 
 
+/* .text-left{
+	text-align: left;
+} */
+
+.text-center{
+	text-align: center;
+}
+
 
 .d-flex{
 	display: flex;
@@ -283,31 +352,27 @@ img{
 	justify-content: space-between;
 }
 
+.justify-content-center{
+	justify-content: center;
+}
+
 .align-items-center{
 	align-items: center;
 }
 
 
-
+.mr-5{
+	margin-right: 20px;
+}
 .mr-8{
 	margin-right: 32px;
 }
-
 .mr-12{
 	margin-right: 48px;
 }
-
-
-
 .mb-2{
 	margin-bottom: 8px;
 }
-
-
-
-
-
-
 .mb-6{
 	margin-bottom: 24px;
 }
@@ -323,4 +388,8 @@ img{
 
 .mb-16{
 	margin-bottom: 64px;
+}
+
+.mb-18{
+	margin-bottom: 72px;
 }
