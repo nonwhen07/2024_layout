@@ -73,12 +73,6 @@ a{
 	color: #ffffff; /* 由於會被主業的css覆蓋先處理，調整後移除 */
 }
 
-
-
-
-
-
-
 img{
     max-width: 100%;
     margin: 0 auto;
@@ -93,21 +87,41 @@ img{
 	font-size: 20px;
 }
 .header-bar{
-	display: flex;
 	padding: 25px 0;
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 }
-.nav{
+.header-nav{
 	width: 512px;
 	display: flex;
 	justify-content: space-between;
 }
-.logo{
+.header-logo{
 	margin: 0 0;
 	width: 80px;
 	height: auto;
 }
+
+@media (max-width: 992px) { /* 平板 => 斷點 https://bootstrap5.hexschool.com/docs/5.0/layout/breakpoints/*/
+	.feature-list .card{
+		
+		
+		margin-bottom: 24px;
+	}
+ }
+
+ @media (max-width: 576px) { /* 手機 */
+	.feature-list .card{
+		width: 100%;
+		margin-bottom: 24px;
+	}
+ }
+
+
+
+
 
 
 .banner{
@@ -124,33 +138,54 @@ img{
 }
 
 
-.intro{
+.feature{
 	background-color: #FBF2F2;
 	color: #650300;
 	text-align: center;
 	padding: 80px 0;
 }
-.card-list{
+.feature-list{
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
-	color: #000000;
-	font-size: 16px;
 }
-.card-item{
-	width: 306px;
+.feature-list .card{
+	/* width: 306px; => width: 25%; 電腦版可以設定特定px，但是轉換成行動裝置邊嘗就不一致了，所以改成百分比較能自適應 */
+	width: calc(25% - 18px); /* 寫法一 : 算法如下card(間距24px)*3 = 72px，72px要分別扣在4個card上，
+		72/4 = 18px，故 width: calc(25% - 18px); 比較不直覺要多練，如果用寫法一、二記得card上面的間隔 mr-4要拿掉。  */
+	/* 寫法二 : width: 25%; + gap: 24px; */
 }
-.card-item img{
-	width: 84px;
+
+@media (max-width: 992px) { /* 平板 */
+	.feature-list .card{
+		width: calc(50% - 12px); /* width: calc(50% - 12px); 寫法一 : 算法如下card(間距24px)*1 = 24px，24px要分別扣在2個card上，24/2 = 12px，故 width: calc(50% - 12px); 比較不直覺要多練  */
+		/* 寫法二 : display: grid;+ width: 50%; + gap: 24px; */
+		/* display: grid;
+		width: 50%;
+		gap: 24px; 這段gap無法生效 */
+		margin-bottom: 24px;
+	}
+ }
+
+ @media (max-width: 576px) { /* 手機 */
+	.feature-list .card{
+		width: 100%;
+		margin-bottom: 24px;
+	}
+ }
+
+.card-img{
+	max-width: 84px;
 	height: auto;
 }
-.card-item-title{
+.card-title{
 	color: #650300;
 	font-size: 24px;
 }
-.card-item-p{
+.card-content{
 	color: #000000;
 	font-size: 16px;
-	text-align: left;
+	/* text-align: left; */
 }
 
 
@@ -161,10 +196,35 @@ img{
 	text-align: center;
 	padding: 80px 0;
 }
-.classic-item{
-	max-width: 416px;
-	height: auto;
+.classic-list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
+.classic-list .classic-item{
+	/* width: 416px; */
+	width: calc(33.333% - 16px);
+}
+
+@media (max-width: 992px) { /* 平板 */
+	.classic-list .classic-item{
+		width: 100%;
+		margin-bottom: 24px;
+	}
+	.classic-img{
+		width: 336px;
+	}
+ }
+
+ @media (max-width: 576px) { /* 手機 */
+	.classic-list .classic-item{
+		width: 100%;
+		margin-bottom: 24px;
+	}
+	.classic-img{
+		width: 348px;
+	}
+ }
 
 
 .design{
@@ -173,12 +233,42 @@ img{
 	text-align: center;
 	padding: 80px 0;
 }
+.design-list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.design-list .design-item{
+	width: 50%;
+}
+
 .design-item-content{
 	background-color: #ffffff;
 	color: #AA0601;
 	padding: 8px 0;
 	
 }
+
+@media (max-width: 992px) { /* 平板 */
+	.design-list .design-item{
+		width: 100%;
+	}
+	.design-list{
+		display: grid;
+		gap: 24px 0;
+	}
+ }
+
+ @media (max-width: 576px) { /* 手機 */
+	.design-list .design-item{
+		width: 100%;
+	}
+	.design-list{
+		display: grid;
+		gap: 24px 0;
+	}
+ }
 
 
 
@@ -309,8 +399,10 @@ img{
 
 /* utils */
 .container{
-    max-width: 1296px; /* 算法依樣 12列、列寬86、間距24 => 12*86+11*24=1296 */
+    max-width: 1320px; /* 算法依樣 12列、列寬86、間距24 => 12*86+11*24=1296，由於盒模型(border box)padding向內推了12*2，最後要補回來1296+24  */
     margin: 0 auto;
+	padding-right: 12px; /* 間距(24px) / 2 = 12px，避免內容貼在視窗邊邊 */
+	padding-left: 12px;
 }
 
 .w-50{
@@ -363,6 +455,9 @@ img{
 
 .mr-5{
 	margin-right: 20px;
+}
+.mr-6{
+	margin-right: 24px;
 }
 .mr-8{
 	margin-right: 32px;
