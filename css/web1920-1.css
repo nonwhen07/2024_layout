@@ -5,7 +5,7 @@
 
 /* banner */
 .banner{
-	background-image: url("../img/home-header.png");
+	background-image: url("../week3_rdw/img/home-header.png");
 	background-repeat: no-repeat; /* repeat：預設值，背景圖會重複；no-repeat：不重複背景圖 */
 	background-size: cover; /* 表示的方式可以寫成px、百分比、cover(將圖片填滿整個容器，若圖片小於容器且像素過低時，容易造成失真)、contain(將圖片縮小成可以完整放入容器的大小，可用於圖片大過容器時的情況) */
 	padding: 296px 0;
@@ -18,7 +18,7 @@
 }
 @media (max-width: 992px) { /* 平板 */
 	.banner{
-		background-image: url("../img/home-header-sm.png");
+		background-image: url("../week3_rdw/img/home-header-sm.png");
 	}
 	.banner-title{
 		width: 100%;
@@ -126,7 +126,7 @@
 
 /* design - 聯名設計 */
  .design{
-	background-image: url("../img/index-bg.png");
+	background-image: url("../week3_rdw/img/index-bg.png");
 	color: #ffffff;
 	text-align: center;
 	padding: 80px 0;
